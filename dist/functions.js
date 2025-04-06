@@ -5,7 +5,7 @@ function openSideNav(){
 }
 
 
-const imageList = ["/FOOD1.avif", "/FOOD2.avif", "/FOOD3-PASTA.avif", "/FOOD4-CHICKEN.avif", "/FOOD5-BEEF.avif"]
+const imageList = ["/dist/FOOD1.avif", "/dist/FOOD2.avif", "/dist/FOOD3-PASTA.avif", "/dist/FOOD4-CHICKEN.avif", "/dist/FOOD5-BEEF.avif"]
 
     let imageIndex = 0;
     const slide = document.getElementById('imgSlideshow');
