@@ -1,11 +1,27 @@
+// SLIDE ANIMATION ON BURGER BUTTON
 function openSideNav(){
-    let openSide = document.getElementById('openSideNav').classList.toggle('hidden');
-    let closeside = document.getElementById('closeSideNav').classList.toggle('hidden');
+  const sideNav = document.getElementById('closeSideNav');
 
+  if(sideNav.classList.contains('hidden')){
+    sideNav.classList.remove('hidden');
+  
+    requestAnimationFrame(() => {
+      sideNav.classList.remove('opacity-0', 'translate-x-5');
+      sideNav.classList.add('opacity-100', 'translate-x-0');
+    });
+    
+  }  else{
+    sideNav.classList.remove('opacity-100', 'translate-x-0');
+    sideNav.classList.add('opacity-0', 'translate-x-5');
+
+    setTimeout(() => {
+      sideNav.classList.add('hidden');
+    }, 200);
+  }
 }
 
-
-const imageList = ["./FOOD1.avif", "./FOOD2.avif", "./FOOD3-PASTA.avif", "./FOOD4-CHICKEN.avif", "./FOOD5-BEEF.avif"]
+// SLIDESHOW IMAGE
+const imageList = ["./ImageFolder/FOOD1.avif", "./ImageFolder/FOOD2.avif", "./ImageFolder/FOOD3-PASTA.avif", "./ImageFolder/FOOD4-CHICKEN.avif", "./ImageFolder/FOOD5-BEEF.avif"]
 
     let imageIndex = 0;
     const slide = document.getElementById('imgSlideshow');
@@ -19,7 +35,7 @@ function changeImage(){
 
 setInterval(changeImage, 2000);
 
-
+// FOR MODAL CONTENT, ANIMATIOSN, AT IBA PA.
 var modals = [
   { openButtonId: 'seeRecipeButton1', closeButtonId: 'closeModalButton1', modalId: 'seeRecipe1', overlayId: 'overlay1' },
   { openButtonId: 'seeRecipeButton2', closeButtonId: 'closeModalButton2', modalId: 'seeRecipe2', overlayId: 'overlay2' },
@@ -57,11 +73,28 @@ function showModal(modal, overlay) {
   modal.classList.remove('hidden');
   modal.classList.add('flex');
   overlay.classList.remove('hidden');
+
+
+  const modalContent = modal.querySelector('div');
+
+  requestAnimationFrame(() => {
+    modalContent.classList.remove('opacity-0', 'scale-95');
+    modalContent.classList.add('opacity-100', 'scale-100');
+
+  })
+
 }
 
 function hideModal(modal, overlay) {
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
+  const modalContent = modal.querySelector('div');
+
+  modalContent.classList.remove('opacity-100', 'scale-100');
+  modalContent.classList.add('opacity-0', 'scale-95');
+
+  setTimeout(() => {
+    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
+  }, 100);
 }
 
 

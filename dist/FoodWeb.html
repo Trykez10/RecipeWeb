@@ -21,7 +21,7 @@
     <!-- Navbar -->
     <nav class="relative shadow-2xl h-25">
 
-        <img class="absolute w-25 h-auto ml-5 mt-3 rounded shadow-lg md:ml-15" src="./WEBSITE LOGO.png" alt="WEBSITE LOGO"> 
+        <img class="absolute w-25 h-auto ml-5 mt-3 rounded shadow-lg md:ml-15" src="./ImageFolder/WEBSITE LOGO.png" alt="WEBSITE LOGO"> 
 
         <ul class="flex justify-end items-center gap-1 list-none md:justify-center ml-20">
 
@@ -30,19 +30,19 @@
                 <i class="fa-solid fa-burger"></i>
             </li>
 
-            <div id="closeSideNav" class="hidden absolute right-2 top-5 z-5 bg-white w-40 shadow-lg">
-                <li onclick="openSideNav()" class="block p-2 hover:bg-gray-200 text-xl text-center"><i class="fa-solid fa-xmark"></i></li>
-                <li class="block p-2 hover:bg-gray-200 text-xl"><a href="#">Home</a></li>
-                <li class="block p-2 hover:bg-gray-200 text-xl"><a href="#">About us</a></li>
-                <li class="block p-2 hover:bg-gray-200 text-xl"><a href="#">Contacts</a></li>
-                <li class="block p-2 hover:bg-gray-200 text-xl"><a href="#">Recipes</a></li>
+            <div id="closeSideNav" class="opacity-0 transform transition-all translate-x-5 duration-300 ease-linear hidden absolute right-2 top-5 z-5 bg-white w-40 shadow-lg">
+                <li onclick="openSideNav()" class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl text-center"><i class="fa-solid fa-xmark"></i></li>
+                <a class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#">Home</a></li>
+                <a class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#">About us</a></li>
+                <a class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#">Contacts</a></li>
+                <a class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#">Recipes</a></li>
             </div>
 
             <!-- DESKTOP VIEW -->
-            <li class="hidden md:flex items-center h-25 p-3 text-2xl hover:bg-gray-200"><a href="#">Home</a></li>
-            <li class="hidden md:flex items-center h-25 p-3 text-2xl hover:bg-gray-200"><a href="#">About us</a></li>
-            <li class="hidden md:flex items-center h-25 p-3 text-2xl hover:bg-gray-200"><a href="#">Contacts</a></li>
-            <li class="hidden md:flex items-center h-25 p-3 text-2xl hover:bg-gray-200"><a href="#">Recipes</a></li>
+            <a class="hidden active:bg-gray-600 active:text-white md:flex items-center h-25 p-3 text-2xl hover:bg-gray-200" href="#">Home</a></li>
+            <a class="hidden active:bg-gray-600 active:text-white md:flex items-center h-25 p-3 text-2xl hover:bg-gray-200" href="#">About us</a></li>
+            <a class="hidden active:bg-gray-600 active:text-white md:flex items-center h-25 p-3 text-2xl hover:bg-gray-200" href="#">Contacts</a></li>
+            <a class="hidden active:bg-gray-600 active:text-white md:flex items-center h-25 p-3 text-2xl hover:bg-gray-200" href="#">Recipes</a></li>
 
             <div class="hidden md:block relative ml-25 mr-5">
                 <input type="text" placeholder="Search..." class="p-2 border rounded">
@@ -55,16 +55,16 @@
     <section class="mt-2 mr-5 ml-5 rounded-2xl h-80 md:h-120 relative overflow-hidden md:bg-amber-300 md:shadow-2xl">
         <div class="relative w-full max-w-5xl md:translate-x-160 h-80 md:h-120">
             <img id="imgSlideshow" class="w-full h-full object-cover transition-opacity opacity-70 duration-500 md:rounded-3xl md:opacity-80"
-                src="./FOOD1.avif" alt="Slideshow Image">
+                src="./ImageFolder/FOOD1.avif" alt="Slideshow Image">
         </div>
 
         <div class="z-10">
             <h1 class="absolute transform translate-x-5 bottom-30 text-4xl font-extrabold w-40 leading-relaxed
                     md:text-7xl md:w-120 md:translate-x-25 md:top-5 md:leading-snug"> <span class="text-red-500 animate-pulse">Spice</span> Up Your Kitchen!</h1>
 
-            <h1 class="absolute transform translate-x-5 bottom-15 text-xl font-medium border border-amber-500 p-1 hover:bg-amber-500 rounded-xl cursor-pointer
-                    animate-bounce
-                    md:translate-x-25 md:bottom-7 md:text-2xl md:p-2">Try These Tasty Recipes →</h1>
+            <h1 class="px-3 py-1 absolute transform translate-x-5 bottom-15 text-lg font-normal bg-transparent hover:bg-amber-500
+                    active:bg-amber-300 active:text-white active:duration-50 rounded-xl cursor-pointer animate-bounce
+                    md:translate-x-25 md:bottom-7 md:text-2xl md:p-2 underline">Try These Tasty Recipes →</h1>
         </div>
     </section> 
 
@@ -75,34 +75,34 @@
         <!-- MEAL TYPES -->
         <div class="relative h-fit w-full text-center mt-5">
             <div class="flex flex-wrap justify-center gap-2 md:gap-10">
-                <div class="text-sm rounded-xl p-1 transition duration-300 ease-linear hover:bg-amber-600 cursor-pointer border border-black w-30 text-center md:text-2xl md:w-80">
+                <div class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-600 cursor-pointer active:bg-amber-300 active:text-white active:duration-50 w-30 text-center md:text-2xl md:w-80">
                     All types
                 </div>
-                <div class="text-sm rounded-xl p-1 transition duration-300 ease-linear hover:bg-amber-600 cursor-pointer border border-black w-40 text-center md:text-2xl md:w-80">
+                <div class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-600 cursor-pointer active:bg-amber-300 active:text-white active:duration-50 text-center md:text-2xl md:w-80">
                     Vegetarian Delights
                 </div>
-                <div class="text-sm rounded-xl p-1 transition duration-300 ease-linear hover:bg-amber-600 cursor-pointer border border-black w-40 text-center md:text-2xl md:w-80">
+                <div class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-600 cursor-pointer active:bg-amber-300 active:text-white  active:duration-50 text-center md:text-2xl md:w-80">
                     International Flavors
                 </div>
             </div>
     
             <div class="flex flex-wrap justify-center gap-2 md:gap-10 mt-5">
-                <div class="text-sm rounded-xl p-1 transition duration-300 ease-linear hover:bg-amber-600 cursor-pointer border border-black w-30 text-center md:text-2xl md:w-60">
+                <div class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-600 cursor-pointer active:bg-amber-300 active:text-white  active:duration-50 w-30 text-center md:text-2xl md:w-60">
                     Appetizers
                 </div>
-                <div class="text-sm rounded-xl p-1 transition duration-300 ease-linear hover:bg-amber-600 cursor-pointer border border-black w-30 text-center md:text-2xl md:w-60">
+                <div class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-600 cursor-pointer active:bg-amber-300 active:text-white  active:duration-50 w-30 text-center md:text-2xl md:w-60">
                     Main Courses
                 </div>
-                <div class="text-sm rounded-xl p-1 transition duration-300 ease-linear hover:bg-amber-600 cursor-pointer border border-black w-40 text-center md:text-2xl md:w-60">
+                <div class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-600 cursor-pointer active:bg-amber-300 active:text-white  active:duration-50 w-40 text-center md:text-2xl md:w-60">
                     Desserts & Sweets
                 </div>
             </div>
     
             <div class="flex flex-wrap justify-center gap-2 md:gap-5 mt-5">
-                <div class="text-sm rounded-xl p-1 transition duration-300 ease-linear hover:bg-amber-600 cursor-pointer border border-black w-40 text-center md:text-2xl md:w-80">
+                <div class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-600 cursor-pointer active:bg-amber-300 active:text-white  active:duration-50 w-40 text-center md:text-2xl md:w-80">
                     Vegetarian Delights
                 </div>
-                <div class="text-sm rounded-xl p-1 transition duration-300 ease-linear hover:bg-amber-600 cursor-pointer border border-black w-40 text-center md:text-2xl md:w-80">
+                <div class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-600 cursor-pointer active:bg-amber-300 active:text-white  active:duration-50 w-40 text-center md:text-2xl md:w-80">
                     International Flavors
                 </div>
             </div>
@@ -113,30 +113,29 @@
         Featured <span class="text-amber-500">Pinoy</span> Dishes</h1>
 
     <div class="h-fit mb-10 mt-10">
-
         <div class="flex flex-wrap justify-center ml-5 gap-4 mr-2 md:gap-10">
             <!-- Dish1 -->
-            <div class="w-60 h-100 bg-gray-200 rounded-2xl md:w-80 md:h-125">
-                <h1 class="text-2xl font-bold ml-2 mb-3 md:text-3xl md:mt-5">Filipino Style<br>Chicken Adobo</h1>
-                <img class="w-55 h-66 ml-2 rounded-2xl shadow-2xl
-                            md:w-75 md:h-85" src="./photo-1546549032-9571cd6b27df.avif" alt="PASTA">
-                <div class="mt-3 ml-2 w-55 h-9 bg-black rounded-2xl text-white flex items-center justify-start px-4 cursor-pointer
+            <div class="w-70 h-104 transform duration-200 ease-in-out hover:-translate-y-5 bg-gray-200 rounded-2xl md:w-80 md:h-125">
+                <h1 class="text-2xl text-center font-bold ml-2 mb-2 md:text-3xl md:mt-5">Filipino Style<br>Chicken Adobo</h1>
+                <img class="w-60 h-70 ml-5 rounded-2xl shadow-2xl shrink-0
+                            md:w-70 md:h-85" src="./ImageFolder/Filipino-Chicken-Adobo_6.webp" alt="PASTA">
+            <div class="mt-3 mx-auto w-60 h-10 bg-black rounded-2xl text-white flex items-center justify-evenly cursor-pointer
                             md:w-70 md:text-xl md:ml-4" id="seeRecipeButton1">
-                            <p class="pl-0 md:pl-2">See complete recipe</p>
-                        <span class="text-lg material-symbols-outlined ml-5">chef_hat</span>
-                </div>
-                
+                        <p class="pl-3 md:pl-2">See complete recipe</p>
+                    <span class="text-lg material-symbols-outlined ml-5">chef_hat</span>
+            </div>
+            </div>    
                 <!-- FOR DARKISH BACKGROUND -->
                 <div id="overlay1" class="hidden fixed inset-0 bg-black opacity-50 z-10"></div>
 
                 <!-- TANGINANG MODAL NA NAKAKALITO SAKIT SA ULO-K -->
-                <div id="seeRecipe1" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
+            <div id="seeRecipe1" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
                     <!-- MODAL CONTENT TANGINA AYOKO NA -->
-                    <div class="scrollbar-none text-center text-lg text-white pr-5 pl-5 pt-8leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
-                       <div class="relative w-full h-20 mb-5 flex flex-row justify-between items-center">
-                            <h1 class="italic font-bold text-2xl text-amber-500 ml-5">FILIPINO STYLE CHICKEN ADOBO</h1>
-                            <button class="cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton1">X</button>
-                       </div>
+                <div class="opacity-0 scale-95 transition-all duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 pt-8leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
+                    <div class="relative w-full h-20 mb-5 flex flex-row justify-between items-center">
+                        <h1 class="italic font-bold text-2xl text-amber-500 ml-5">FILIPINO STYLE CHICKEN ADOBO</h1>
+                        <button class="cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton1">X</button>
+                    </div>
                             <h1 class=" pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
                             <p>1 kg chicken (cut into serving pieces)</p>
                             <p>1/2 cup soy sauce</p>
@@ -172,47 +171,44 @@
                         Let it simmer uncovered for another <strong>10 minutes</strong> until the sauce thickens to your desired consistency.
                         Serve hot with <strong>steamed rice</strong> and enjoy!</p>
                         
-                    </div>
                 </div>
             </div>
 
             <!-- Dish2 -->
-            <div class="w-60 h-100 bg-gray-200 rounded-2xl
-                        md:w-80 md:h-125">
-                <h1 class="text-2xl font-bold ml-2 mb-3
-                         md:text-3xl md:mt-5">Filipino Style<br>Chicken Adobo</h1>
-                <img class="w-55 h-66 ml-2 rounded-2xl shadow-2xl
-                            md:w-75 md:h-85" src="./photo-1546549032-9571cd6b27df.avif" alt="PASTA">
-                <div class="mt-3 ml-2 w-55 h-9 bg-black rounded-2xl text-white flex items-center justify-start px-4 cursor-pointer
+            <div class="w-70 h-104 transition duration-200 ease-linear hover:-translate-y-5 bg-gray-200 rounded-2xl md:w-80 md:h-125">
+                <h1 class="text-2xl text-center font-bold ml-2 mb-2 md:text-3xl md:mt-5">Sinigang Na<br>Baboy</h1>
+                <img class="w-60 h-70 ml-5 rounded-2xl shadow-2xl
+                            md:w-70 md:h-85" src="./ImageFolder/SINIGGA.jpg" alt="PASTA">
+            <div class="mt-3 mx-auto w-60 h-10 bg-black rounded-2xl text-white flex items-center justify-evenly cursor-pointer
                             md:w-70 md:text-xl md:ml-4" id="seeRecipeButton2">
-                        <p class="pl-0 md:pl-2">See complete recipe</p>
-                        <span class="text-lg material-symbols-outlined ml-5">chef_hat</span>
-                </div>
-                
-                <!-- DARKISH BACKGROUND -->
+                    <p class="pl-3 md:pl-2">See complete recipe</p>
+                    <span class="text-lg material-symbols-outlined ml-5">chef_hat</span>
+            </div>
+            </div>    
+                <!-- FOR DARKISH BACKGROUND -->
                 <div id="overlay2" class="hidden fixed inset-0 bg-black opacity-50 z-10"></div>
-                <!-- TANGINANG Modal -->
-                <div id="seeRecipe2" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
-                    <!-- MODAL CONTENT TANGINA AYOKO NA -->
-                    <div class="scrollbar-none text-center text-lg text-white pr-5 pl-5 leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
-                        <div class="relative w-full h-20 mb-5 flex flex-row justify-between items-center">
-                            <h1 class="italic font-bold text-2xl text-amber-500 ml-5">FILIPINO STYLE CHICKEN ADOBO</h1>
-                            <button class="cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton2">X</button>
-                        </div>
-                        <h1 class="mt-10 pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
-                        <p>1 kg chicken (cut into serving pieces)</p>
-                        <p>1/2 cup soy sauce</p>
-                        <p>1/4 cup vinegar</p>
-                        <p>1 cup water</p>
-                        <p>6 cloves garlic (minced)</p>
-                        <p>1 onion (sliced)</p>
-                        <p>2 bay leaves</p>
-                        <p>1 tsp black peppercorns (or ground black pepper)</p>
-                        <p>1 tbsp brown sugar (optional)</p>
-                        <p>2 tbsp cooking oil</p>
-                        <p>1/2 tsp salt (adjust to taste)</p>
 
-                        <h1  class="pt-10 text-2xl text-amber-500 pb-5">HOW TO COOK?</h1>
+                <!-- TANGINANG MODAL NA NAKAKALITO SAKIT SA ULO-K -->
+            <div id="seeRecipe2" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
+                    <!-- MODAL CONTENT TANGINA AYOKO NA -->
+                <div class="opacity-0 scale-95 transition-all duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 pt-8leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
+                    <div class="relative w-full h-20 mb-5 flex flex-row justify-between items-center">
+                        <h1 class="italic font-bold text-2xl text-amber-500 mx-auto">SINIGANG NA BABOY</h1>
+                        <button class="cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton2">X</button>
+                    </div>
+                            <h1 class=" pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
+                            <p>1 kg chicken (cut into serving pieces)</p>
+                            <p>1/2 cup soy sauce</p>
+                            <p>1/4 cup vinegar</p>
+                            <p>1 cup water</p>
+                            <p>6 cloves garlic (minced)</p>
+                            <p>1 onion (sliced)</p>
+                            <p>2 bay leaves</p>
+                            <p>1 tsp black peppercorns (or ground black pepper)</p>
+                            <p>1 tbsp brown sugar (optional)</p>
+                            <p>2 tbsp cooking oil</p>
+                            <p>1/2 tsp salt (adjust to taste)</p>
+                            <h1  class="pt-10 text-2xl text-amber-500 pb-5">HOW TO COOK?</h1>
 
                         <p class="pb-5"><strong>1. Marinate the Chicken</strong> <br>
                         In a bowl, combine the chicken, soy sauce, minced garlic, and black pepper.
@@ -235,47 +231,45 @@
                         Let it simmer uncovered for another <strong>10 minutes</strong> until the sauce thickens to your desired consistency.
                         Serve hot with <strong>steamed rice</strong> and enjoy!</p>
                         
-                    </div>
                 </div>
             </div>
 
-            <!-- Dish3 -->
-            <div class="w-60 h-100 bg-gray-200 rounded-2xl
-                        md:w-80 md:h-125">
-                <h1 class="text-2xl font-bold ml-2 mb-3
-                         md:text-3xl md:mt-5">Filipino Style<br>Chicken Adobo</h1>
-                <img class="w-55 h-66 ml-2 rounded-2xl shadow-2xl
-                            md:w-75 md:h-85" src="./photo-1546549032-9571cd6b27df.avif" alt="PASTA">
-                <div class="mt-3 ml-2 w-55 h-9 bg-black rounded-2xl text-white flex items-center justify-start px-4 cursor-pointer
-                            md:w-70 md:text-xl md:ml-4" id="seeRecipeButton3">
-                            <p class="pl-0 md:pl-2">See complete recipe</p>
-                        <span class="text-lg material-symbols-outlined ml-5">chef_hat</span>
-                </div>
-                
-                <!-- DARKISH BACKGROUND -->
-                <div id="overlay3" class="hidden fixed inset-0 bg-black opacity-50 z-10"></div>
-                <!-- TANGINANG Modal -->
-                <div id="seeRecipe3" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
-                    <!-- MODAL CONTENT TANGINA AYOKO NA -->
-                    <div class="scrollbar-none text-center text-lg text-white pr-5 pl-5 leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
-                        <div class="relative w-full h-20 mb-5 flex flex-row justify-between items-center">
-                            <h1 class="italic font-bold text-2xl text-amber-500 ml-5">FILIPINO STYLE CHICKEN ADOBO</h1>
-                            <button class="cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton3">X</button>
-                        </div>
-                        <h1 class="mt-10 pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
-                        <p>1 kg chicken (cut into serving pieces)</p>
-                        <p>1/2 cup soy sauce</p>
-                        <p>1/4 cup vinegar</p>
-                        <p>1 cup water</p>
-                        <p>6 cloves garlic (minced)</p>
-                        <p>1 onion (sliced)</p>
-                        <p>2 bay leaves</p>
-                        <p>1 tsp black peppercorns (or ground black pepper)</p>
-                        <p>1 tbsp brown sugar (optional)</p>
-                        <p>2 tbsp cooking oil</p>
-                        <p>1/2 tsp salt (adjust to taste)</p>
 
-                        <h1  class="pt-10 text-2xl text-amber-500 pb-5">HOW TO COOK?</h1>
+            <!-- Dish3 -->
+            <div class="w-70 h-104 transition duration-200 ease-linear hover:-translate-y-5 bg-gray-200 rounded-2xl md:w-80 md:h-125">
+                <h1 class="text-2xl text-center font-bold mt-5 ml-2 mb-5 md:text-4xl md:mt-5">Laing</h1>
+                <img class="w-60 h-70 ml-5 rounded-2xl shadow-2xl
+                            md:w-70 md:h-90" src="./ImageFolder/LAING.jpg" alt="PASTA">
+            <div class="mt-3 mx-auto w-60 h-10 bg-black rounded-2xl text-white flex items-center justify-evenly cursor-pointer
+                            md:w-70 md:text-xl md:ml-4" id="seeRecipeButton3">
+                    <p class="pl-3 md:pl-2">See complete recipe</p>
+                    <span class="text-lg material-symbols-outlined ml-5">chef_hat</span>
+            </div>
+            </div>    
+                <!-- FOR DARKISH BACKGROUND -->
+                <div id="overlay3" class="hidden fixed inset-0 bg-black opacity-50 z-10"></div>
+
+                <!-- TANGINANG MODAL NA NAKAKALITO SAKIT SA ULO-K -->
+            <div id="seeRecipe3" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
+                    <!-- MODAL CONTENT TANGINA AYOKO NA -->
+                <div class="opacity-0 scale-95 transition-all duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 pt-8leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
+                    <div class="relative w-full h-20 mb-5 flex flex-row justify-between items-center">
+                        <h1 class="italic font-bold text-4xl text-amber-500 mt-3 mx-auto">LAING</h1>
+                        <button class="cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton3">X</button>
+                    </div>
+                            <h1 class=" pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
+                            <p>1 kg chicken (cut into serving pieces)</p>
+                            <p>1/2 cup soy sauce</p>
+                            <p>1/4 cup vinegar</p>
+                            <p>1 cup water</p>
+                            <p>6 cloves garlic (minced)</p>
+                            <p>1 onion (sliced)</p>
+                            <p>2 bay leaves</p>
+                            <p>1 tsp black peppercorns (or ground black pepper)</p>
+                            <p>1 tbsp brown sugar (optional)</p>
+                            <p>2 tbsp cooking oil</p>
+                            <p>1/2 tsp salt (adjust to taste)</p>
+                            <h1  class="pt-10 text-2xl text-amber-500 pb-5">HOW TO COOK?</h1>
 
                         <p class="pb-5"><strong>1. Marinate the Chicken</strong> <br>
                         In a bowl, combine the chicken, soy sauce, minced garlic, and black pepper.
@@ -298,47 +292,44 @@
                         Let it simmer uncovered for another <strong>10 minutes</strong> until the sauce thickens to your desired consistency.
                         Serve hot with <strong>steamed rice</strong> and enjoy!</p>
                         
-                    </div>
                 </div>
             </div>
 
             <!-- Dish 4 -->
-            <div class="w-60 h-100 bg-gray-200 rounded-2xl
-                        md:w-80 md:h-125">
-                <h1 class="text-2xl font-bold ml-2 mb-3
-                         md:text-3xl md:mt-5">Filipino Style<br>Chicken Adobo</h1>
-                <img class="w-55 h-66 ml-2 rounded-2xl shadow-2xl
-                            md:w-75 md:h-85" src="./photo-1546549032-9571cd6b27df.avif" alt="PASTA">
-                <div class="mt-3 ml-2 w-55 h-9 bg-black rounded-2xl text-white flex items-center justify-start px-4 cursor-pointer
+            <div class="w-70 h-104 transition duration-200 ease-linear hover:-translate-y-5 bg-gray-200 rounded-2xl md:w-80 md:h-125">
+                <h1 class="text-2xl text-center font-bold mt-5 ml-2 mb-5 md:text-3xl md:mt-5">Kare-Kare</h1>
+                <img class="w-60 h-70 ml-5 rounded-2xl shadow-2xl
+                            md:w-70 md:h-90" src="./ImageFolder/Kare2.jpg" alt="PASTA">
+            <div class="mt-3 mx-auto w-60 h-10 bg-black rounded-2xl text-white flex items-center justify-evenly cursor-pointer
                             md:w-70 md:text-xl md:ml-4" id="seeRecipeButton4">
-                            <p class="pl-0 md:pl-2">See complete recipe</p>
-                        <span class="text-lg material-symbols-outlined ml-5">chef_hat</span>
-                </div>
-                
-                <!-- DARKISH BACKGROUND -->
+                    <p class="pl-3 md:pl-2">See complete recipe</p>
+                    <span class="text-lg material-symbols-outlined ml-5">chef_hat</span>
+            </div>
+            </div>    
+                <!-- FOR DARKISH BACKGROUND -->
                 <div id="overlay4" class="hidden fixed inset-0 bg-black opacity-50 z-10"></div>
-                <!-- TANGINANG Modal -->
-                <div id="seeRecipe4" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
-                    <!-- MODAL CONTENT TANGINA AYOKO NA -->
-                    <div class="scrollbar-none text-center text-lg text-white pr-5 pl-5 leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
-                        <div class="relative w-full h-20 mb-5 flex flex-row justify-between items-center">
-                            <h1 class="italic font-bold text-2xl text-amber-500 ml-5">FILIPINO STYLE CHICKEN ADOBO</h1>
-                            <button class="cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton4">X</button>
-                        </div>
-                        <h1 class="mt-10 pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
-                        <p>1 kg chicken (cut into serving pieces)</p>
-                        <p>1/2 cup soy sauce</p>
-                        <p>1/4 cup vinegar</p>
-                        <p>1 cup water</p>
-                        <p>6 cloves garlic (minced)</p>
-                        <p>1 onion (sliced)</p>
-                        <p>2 bay leaves</p>
-                        <p>1 tsp black peppercorns (or ground black pepper)</p>
-                        <p>1 tbsp brown sugar (optional)</p>
-                        <p>2 tbsp cooking oil</p>
-                        <p>1/2 tsp salt (adjust to taste)</p>
 
-                        <h1  class="pt-10 text-2xl text-amber-500 pb-5">HOW TO COOK?</h1>
+                <!-- TANGINANG MODAL NA NAKAKALITO SAKIT SA ULO-K -->
+            <div id="seeRecipe4" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
+                    <!-- MODAL CONTENT TANGINA AYOKO NA -->
+                <div class="opacity-0 scale-95 transition-all duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 pt-8leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
+                    <div class="relative w-full h-20 mb-5 flex flex-row justify-between items-center">
+                        <h1 class="italic font-bold text-2xl text-amber-500 ml-5">KARE-KARE</h1>
+                        <button class="cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton4">X</button>
+                    </div>
+                            <h1 class=" pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
+                            <p>1 kg chicken (cut into serving pieces)</p>
+                            <p>1/2 cup soy sauce</p>
+                            <p>1/4 cup vinegar</p>
+                            <p>1 cup water</p>
+                            <p>6 cloves garlic (minced)</p>
+                            <p>1 onion (sliced)</p>
+                            <p>2 bay leaves</p>
+                            <p>1 tsp black peppercorns (or ground black pepper)</p>
+                            <p>1 tbsp brown sugar (optional)</p>
+                            <p>2 tbsp cooking oil</p>
+                            <p>1/2 tsp salt (adjust to taste)</p>
+                            <h1  class="pt-10 text-2xl text-amber-500 pb-5">HOW TO COOK?</h1>
 
                         <p class="pb-5"><strong>1. Marinate the Chicken</strong> <br>
                         In a bowl, combine the chicken, soy sauce, minced garlic, and black pepper.
@@ -361,46 +352,44 @@
                         Let it simmer uncovered for another <strong>10 minutes</strong> until the sauce thickens to your desired consistency.
                         Serve hot with <strong>steamed rice</strong> and enjoy!</p>
                         
-                    </div>
                 </div>
             </div>
 
             <!-- Dish 5 -->
-            <div class="w-60 h-100 bg-gray-200 rounded-2xl
-                        md:w-80 md:h-125">
-                <h1 class="text-2xl font-bold ml-2 mb-3
-                         md:text-3xl md:mt-5">Filipino Style<br>Chicken Adobo</h1>
-                <img class="w-55 h-66 ml-2 rounded-2xl shadow-2xl
-                            md:w-75 md:h-85" src="./photo-1546549032-9571cd6b27df.avif" alt="PASTA">
-                <div class="mt-3 ml-2 w-55 h-9 bg-black rounded-2xl text-white flex items-center justify-start px-4 cursor-pointer
+            <div class="w-70 h-104 transition duration-200 ease-linear hover:-translate-y-5 bg-gray-200 rounded-2xl md:w-80 md:h-125">
+                <h1 class="text-2xl text-center font-bold mt-5 ml-2 mb-5 md:text-3xl md:mt-5">TOCILOG</h1>
+                <img class="w-60 h-70 ml-5 rounded-2xl shadow-2xl
+                            md:w-70 md:h-90" src="./ImageFolder/TAPSI.jpg" alt="PASTA">
+            <div class="mt-3 mx-auto w-60 h-10 bg-black rounded-2xl text-white flex items-center justify-evenly cursor-pointer
                             md:w-70 md:text-xl md:ml-4" id="seeRecipeButton5">
-                            <p class="pl-0 md:pl-2">See complete recipe</p>
-                        <span class="text-lg material-symbols-outlined ml-5">chef_hat</span>
-                </div>
-                
-                <!-- DARKISH BACKGROUND -->
+                    <p class="pl-3 md:pl-2">See complete recipe</p>
+                    <span class="text-lg material-symbols-outlined ml-5">chef_hat</span>
+            </div>
+            </div>    
+                <!-- FOR DARKISH BACKGROUND -->
                 <div id="overlay5" class="hidden fixed inset-0 bg-black opacity-50 z-10"></div>
-                <!-- TANGINANG Modal -->
-                <div id="seeRecipe5" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
-                    <!-- MODAL CONTENT TANGINA AYOKO NA -->
-                    <div class="scrollbar-none text-center text-lg text-white pr-5 pl-5 leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
-                        <div class="relative w-full h-20 mb-5 flex flex-row justify-between items-center">
-                            <h1 class="italic font-bold text-2xl text-amber-500 ml-5">FILIPINO STYLE CHICKEN ADOBO</h1>
-                            <button class="cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton5">X</button>
-                        </div><h1 class="mt-10 pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
-                        <p>1 kg chicken (cut into serving pieces)</p>
-                        <p>1/2 cup soy sauce</p>
-                        <p>1/4 cup vinegar</p>
-                        <p>1 cup water</p>
-                        <p>6 cloves garlic (minced)</p>
-                        <p>1 onion (sliced)</p>
-                        <p>2 bay leaves</p>
-                        <p>1 tsp black peppercorns (or ground black pepper)</p>
-                        <p>1 tbsp brown sugar (optional)</p>
-                        <p>2 tbsp cooking oil</p>
-                        <p>1/2 tsp salt (adjust to taste)</p>
 
-                        <h1  class="pt-10 text-2xl text-amber-500 pb-5">HOW TO COOK?</h1>
+                <!-- TANGINANG MODAL NA NAKAKALITO SAKIT SA ULO-K -->
+            <div id="seeRecipe5" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
+                    <!-- MODAL CONTENT TANGINA AYOKO NA -->
+                <div class="opacity-0 scale-95 transition-all duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 pt-8leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
+                    <div class="relative w-full h-20 mb-5 flex flex-row justify-between items-center">
+                        <h1 class="italic font-bold text-2xl text-amber-500 ml-5">TOCILOG</h1>
+                        <button class="cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton5">X</button>
+                    </div>
+                            <h1 class=" pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
+                            <p>1 kg chicken (cut into serving pieces)</p>
+                            <p>1/2 cup soy sauce</p>
+                            <p>1/4 cup vinegar</p>
+                            <p>1 cup water</p>
+                            <p>6 cloves garlic (minced)</p>
+                            <p>1 onion (sliced)</p>
+                            <p>2 bay leaves</p>
+                            <p>1 tsp black peppercorns (or ground black pepper)</p>
+                            <p>1 tbsp brown sugar (optional)</p>
+                            <p>2 tbsp cooking oil</p>
+                            <p>1/2 tsp salt (adjust to taste)</p>
+                            <h1  class="pt-10 text-2xl text-amber-500 pb-5">HOW TO COOK?</h1>
 
                         <p class="pb-5"><strong>1. Marinate the Chicken</strong> <br>
                         In a bowl, combine the chicken, soy sauce, minced garlic, and black pepper.
@@ -422,47 +411,44 @@
                         <p class="pb-5"><strong>5. Reduce the Sauce & Serve</strong> <br>
                         Let it simmer uncovered for another <strong>10 minutes</strong> until the sauce thickens to your desired consistency.
                         Serve hot with <strong>steamed rice</strong> and enjoy!</p>
-                        
-                    </div>
                 </div>
             </div>
 
             <!-- Dish 6 -->
-            <div class="w-60 h-100 bg-gray-200 rounded-2xl
-                        md:w-80 md:h-125">
-                <h1 class="text-2xl font-bold ml-2 mb-3
-                         md:text-3xl md:mt-5">Filipino Style<br>Chicken Adobo</h1>
-                <img class="w-55 h-66 ml-2 rounded-2xl shadow-2xl
-                            md:w-75 md:h-85" src="./photo-1546549032-9571cd6b27df.avif" alt="PASTA">
-                <div class="mt-3 ml-2 w-55 h-9 bg-black rounded-2xl text-white flex items-center justify-start px-4 cursor-pointer
+            <div class="w-70 h-104 transition duration-200 ease-linear hover:-translate-y-5 bg-gray-200 rounded-2xl md:w-80 md:h-125">
+                <h1 class="text-2xl text-center font-bold mt-5 ml-2 mb-5 md:text-3xl md:mt-5">Pork Sisig</h1>
+                <img class="w-60 h-70 ml-5 rounded-2xl shadow-2xl
+                            md:w-70 md:h-90" src="./ImageFolder/SISIG.jpg" alt="PASTA">
+            <div class="mt-3 mx-auto w-60 h-10 bg-black rounded-2xl text-white flex items-center justify-evenly cursor-pointer
                             md:w-70 md:text-xl md:ml-4" id="seeRecipeButton6">
-                            <p class="pl-0 md:pl-2">See complete recipe</p>
-                        <span class="text-lg material-symbols-outlined ml-5">chef_hat</span>
-                </div>
-                
-                <!-- DARKISH BACKGROUND -->
+                    <p class="pl-3 md:pl-2">See complete recipe</p>
+                    <span class="text-lg material-symbols-outlined ml-5">chef_hat</span>
+            </div>
+            </div>    
+                <!-- FOR DARKISH BACKGROUND -->
                 <div id="overlay6" class="hidden fixed inset-0 bg-black opacity-50 z-10"></div>
-                <!-- TANGINANG Modal -->
-                <div id="seeRecipe6" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
-                    <!-- MODAL CONTENT TANGINA AYOKO NA -->
-                    <div class="scrollbar-none text-center text-lg text-white pr-5 pl-5 leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
-                        <div class="relative w-full h-20 mb-5 flex flex-row justify-between items-center">
-                            <h1 class="italic font-bold text-2xl text-amber-500 ml-5">FILIPINO STYLE CHICKEN ADOBO</h1>
-                            <button class="cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton6">X</button>
-                        </div><h1 class="mt-10 pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
-                        <p>1 kg chicken (cut into serving pieces)</p>
-                        <p>1/2 cup soy sauce</p>
-                        <p>1/4 cup vinegar</p>
-                        <p>1 cup water</p>
-                        <p>6 cloves garlic (minced)</p>
-                        <p>1 onion (sliced)</p>
-                        <p>2 bay leaves</p>
-                        <p>1 tsp black peppercorns (or ground black pepper)</p>
-                        <p>1 tbsp brown sugar (optional)</p>
-                        <p>2 tbsp cooking oil</p>
-                        <p>1/2 tsp salt (adjust to taste)</p>
 
-                        <h1  class="pt-10 text-2xl text-amber-500 pb-5">HOW TO COOK?</h1>
+                <!-- TANGINANG MODAL NA NAKAKALITO SAKIT SA ULO-K -->
+            <div id="seeRecipe6" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
+                    <!-- MODAL CONTENT TANGINA AYOKO NA -->
+                <div class="opacity-0 scale-95 transition-all duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 pt-8leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
+                    <div class="relative w-full h-20 mb-5 flex flex-row justify-between items-center">
+                        <h1 class="italic font-bold text-2xl text-amber-500 ml-5">PORK SISIG</h1>
+                        <button class="cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton6">X</button>
+                    </div>
+                            <h1 class=" pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
+                            <p>1 kg chicken (cut into serving pieces)</p>
+                            <p>1/2 cup soy sauce</p>
+                            <p>1/4 cup vinegar</p>
+                            <p>1 cup water</p>
+                            <p>6 cloves garlic (minced)</p>
+                            <p>1 onion (sliced)</p>
+                            <p>2 bay leaves</p>
+                            <p>1 tsp black peppercorns (or ground black pepper)</p>
+                            <p>1 tbsp brown sugar (optional)</p>
+                            <p>2 tbsp cooking oil</p>
+                            <p>1/2 tsp salt (adjust to taste)</p>
+                            <h1  class="pt-10 text-2xl text-amber-500 pb-5">HOW TO COOK?</h1>
 
                         <p class="pb-5"><strong>1. Marinate the Chicken</strong> <br>
                         In a bowl, combine the chicken, soy sauce, minced garlic, and black pepper.
@@ -485,34 +471,32 @@
                         Let it simmer uncovered for another <strong>10 minutes</strong> until the sauce thickens to your desired consistency.
                         Serve hot with <strong>steamed rice</strong> and enjoy!</p>
                         
-                    </div>
                 </div>
             </div>
 
             <!-- Dish 7 -->
-            <div class="w-60 h-100 bg-gray-200 rounded-2xl
-                        md:w-80 md:h-125">
-                <h1 class="text-2xl font-bold ml-2 mb-3
-                         md:text-3xl md:mt-5">Filipino Style<br>Chicken Adobo</h1>
-                <img class="w-55 h-66 ml-2 rounded-2xl shadow-2xl
-                            md:w-75 md:h-85" src="./photo-1546549032-9571cd6b27df.avif" alt="PASTA">
-                <div class="mt-3 ml-2 w-55 h-9 bg-black rounded-2xl text-white flex items-center justify-start px-4 cursor-pointer
+            <div class="w-70 h-104 transition duration-200 ease-linear hover:-translate-y-5 bg-gray-200 rounded-2xl md:w-80 md:h-125">
+                <h1 class="text-2xl text-center font-bold mt-5 ml-2 mb-5 md:text-3xl md:mt-5">Lumpiang Shanghai</h1>
+                <img class="w-60 h-70 ml-5 rounded-2xl shadow-2xl
+                            md:w-70 md:h-90" src="./ImageFolder/LUMPIA.jpg" alt="PASTA">
+                <div class="mt-3 mx-auto w-60 h-10 bg-black rounded-2xl text-white flex justify-evenly items-center cursor-pointer
                             md:w-70 md:text-xl md:ml-4" id="seeRecipeButton7">
-                            <p class="pl-0 md:pl-2">See complete recipe</p>
-                        <span class="text-lg material-symbols-outlined ml-5">chef_hat</span>
+                    <p class="md:pl-2">See complete recipe</p>
+                    <span class="text-lg material-symbols-outlined">chef_hat</span>
                 </div>
-                
-                <!-- DARKISH BACKGROUND -->
+            </div>    
+                <!-- FOR DARKISH BACKGROUND -->
                 <div id="overlay7" class="hidden fixed inset-0 bg-black opacity-50 z-10"></div>
-                <!-- TANGINANG Modal -->
-                <div id="seeRecipe7" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
+
+                <!-- TANGINANG MODAL NA NAKAKALITO SAKIT SA ULO-K -->
+            <div id="seeRecipe7" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
                     <!-- MODAL CONTENT TANGINA AYOKO NA -->
-                    <div class="scrollbar-none text-center text-lg text-white pr-5 pl-5 leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
-                        <div class="relative w-full h-20 mb-5 flex flex-row justify-between items-center">
-                            <h1 class="italic font-bold text-2xl text-amber-500 ml-5">FILIPINO STYLE CHICKEN ADOBO</h1>
-                            <button class="cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton7">X</button>
-                        </div>
-                        <h1 class="mt-10 pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
+                <div class="opacity-0 scale-95 duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 pt-8leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
+                    <div class="relative w-full h-20 mb-5 flex flex-row justify-between items-center">
+                        <h1 class="italic font-bold text-2xl text-amber-500 ml-5">LUMPIANG SHANGHAI</h1>
+                        <button class="cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton7">X</button>
+                    </div>
+                        <h1 class=" pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
                         <p>1 kg chicken (cut into serving pieces)</p>
                         <p>1/2 cup soy sauce</p>
                         <p>1/4 cup vinegar</p>
@@ -524,7 +508,6 @@
                         <p>1 tbsp brown sugar (optional)</p>
                         <p>2 tbsp cooking oil</p>
                         <p>1/2 tsp salt (adjust to taste)</p>
-
                         <h1  class="pt-10 text-2xl text-amber-500 pb-5">HOW TO COOK?</h1>
 
                         <p class="pb-5"><strong>1. Marinate the Chicken</strong> <br>
@@ -547,34 +530,32 @@
                         <p class="pb-5"><strong>5. Reduce the Sauce & Serve</strong> <br>
                         Let it simmer uncovered for another <strong>10 minutes</strong> until the sauce thickens to your desired consistency.
                         Serve hot with <strong>steamed rice</strong> and enjoy!</p>
-                        
-                    </div>
                 </div>
             </div>
 
             <!-- Dish 8 -->
-            <div class="w-60 h-100 bg-gray-200 rounded-2xl
-                        md:w-80 md:h-125">
-                <h1 class="text-2xl font-bold ml-2 mb-3
-                         md:text-3xl md:mt-5">Filipino Style<br>Chicken Adobo</h1>
-                <img class="w-55 h-66 ml-2 rounded-2xl shadow-2xl
-                            md:w-75 md:h-85" src="./photo-1546549032-9571cd6b27df.avif" alt="PASTA">
-                <div class="mt-3 ml-2 w-55 h-9 bg-black rounded-2xl text-white flex items-center justify-start px-4 cursor-pointer
+            <div class="w-70 h-104 transition duration-200 ease-linear hover:-translate-y-5 bg-gray-200 rounded-2xl md:w-80 md:h-125">
+                <h1 class="text-2xl text-center font-bold mt-5 ml-2 mb-5 md:text-3xl md:mt-5">Bicol Express</h1>
+                <img class="w-60 h-70 ml-5 rounded-2xl shadow-2xl
+                            md:w-70 md:h-90" src="./ImageFolder/bicol exp.jpg" alt="PASTA">
+                <div class="mt-3 mx-auto w-60 h-10 bg-black rounded-2xl text-white flex justify-evenly items-center cursor-pointer
                             md:w-70 md:text-xl md:ml-4" id="seeRecipeButton8">
-                            <p class="pl-0 md:pl-2">See complete recipe</p>
-                        <span class="text-lg material-symbols-outlined ml-5">chef_hat</span>
+                    <p class="md:pl-2">See complete recipe</p>
+                    <span class="text-lg material-symbols-outlined">chef_hat</span>
                 </div>
-                
-                <!-- DARKISH BACKGROUND -->
+            </div>    
+                <!-- FOR DARKISH BACKGROUND -->
                 <div id="overlay8" class="hidden fixed inset-0 bg-black opacity-50 z-10"></div>
-                <!-- TANGINANG Modal -->
-                <div id="seeRecipe8" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
+
+                <!-- TANGINANG MODAL NA NAKAKALITO SAKIT SA ULO-K -->
+            <div id="seeRecipe8" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
                     <!-- MODAL CONTENT TANGINA AYOKO NA -->
-                    <div class="scrollbar-none text-center text-lg text-white pr-5 pl-5 leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
-                        <div class="relative w-full h-20 mb-5 flex flex-row justify-between items-center">
-                            <h1 class="italic font-bold text-2xl text-amber-500 ml-5">FILIPINO STYLE CHICKEN ADOBO</h1>
-                            <button class="cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton8">X</button>
-                        </div><h1 class="mt-10 pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
+                <div class="opacity-0 scale-90 transition-all duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 pt-8leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
+                    <div class="relative w-full h-20 mb-5 flex flex-row justify-between items-center">
+                        <h1 class="italic font-bold text-2xl text-amber-500 ml-5">BICOL EXPRESS</h1>
+                        <button class="cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton8">X</button>
+                    </div>
+                        <h1 class=" pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
                         <p>1 kg chicken (cut into serving pieces)</p>
                         <p>1/2 cup soy sauce</p>
                         <p>1/4 cup vinegar</p>
@@ -586,7 +567,6 @@
                         <p>1 tbsp brown sugar (optional)</p>
                         <p>2 tbsp cooking oil</p>
                         <p>1/2 tsp salt (adjust to taste)</p>
-
                         <h1  class="pt-10 text-2xl text-amber-500 pb-5">HOW TO COOK?</h1>
 
                         <p class="pb-5"><strong>1. Marinate the Chicken</strong> <br>
@@ -609,16 +589,13 @@
                         <p class="pb-5"><strong>5. Reduce the Sauce & Serve</strong> <br>
                         Let it simmer uncovered for another <strong>10 minutes</strong> until the sauce thickens to your desired consistency.
                         Serve hot with <strong>steamed rice</strong> and enjoy!</p>
-                        
-                    </div>
                 </div>
             </div>
         </div> 
     </div>
 
-    <div class="w-70 p-2 border text-center mx-auto transition duration-300 ease-linear hover:bg-amber-500
-                 hover:text-white cursor-pointer text-xl md:text-3xl 
-                mb-5 border-amber-500 text-black-500 rounded-2xl">See more recipes →</div>
+    <div class="w-85 p-2 text-center mx-auto transition duration-200 ease-linear bg-gray-300 hover:bg-amber-500 active:bg-amber-300 active:text-white active:duration-50
+                cursor-pointer text-xl md:text-3xl mb-5 text-black-500 rounded-2xl">See more recipes →</div>
 
     <!-- TESTIMONIALS SECTION -->
     <section class="ml-5 mr-5 rounded-xl h-fit mb-10 bg-gray-800 md:h-60" >
@@ -635,34 +612,37 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="bg-gray-700 h-full">
-            <div class="flex flex-col pt-5 pb-5 pl-3 ml-5 mr-5 text-center text-white">
-                <img class="w-25 h-auto mx-auto rounded mb-2 drop-shadow-xl" src="./WEBSITE LOGO.png" alt="WEBSITE FOOTER LOGO">
-                <p>Join MmmMazing now and embark on a culinary journey to explore, create, and savor amazing recipes!</p>
+            <div class="flex flex-col items-center md:flex-wrap md:flex-row md:justify-between md:items-start pt-10 pb-5 pl-3 ml-5 mr-5 text-center text-white">
+                <div class="md:w-1/3 flex flex-col items-center ">
+                    <img class="w-25 h-auto md:w-50 mx-auto rounded mb-2 drop-shadow-xl" src="./ImageFolder/WEBSITE LOGO.png" alt="WEBSITE FOOTER LOGO">
+                    <p>Join MmmMazing now and embark on a culinary journey to explore, create, and savor amazing recipes!</p>
+                </div>
 
-                <div class="">
-                    <h1 class=" text-2xl pt-10 pb-5"><strong>Company</strong></h1>
+                <div class="md:w-1/3">
+                    <h1 class=" text-2xl pt-5 pb-5"><strong>Company</strong></h1>
                     <p class="mb-2">About Us</p> 
                     <p class="mb-2">Our Stories</p> 
                     <p class="mb-2">Work with Us</p> 
                     <p class="mb-2">User Testimonies</p>
                 </div>
-                
-                <div>
-                    <h1 class=" text-2xl pt-10 pb-5"><strong>Support</strong></h1>
+
+                <div class="md:w-1/3">
+                    <h1 class="text-2xl pt-5 pb-5"><strong>Support</strong></h1>
                     <p class="mb-2">FAQ</p> 
                     <p class="mb-2">Membership</p> 
                     <p class="mb-2">User Policy</p>
                     <p class="mb-2">Customer Support</p>
                 </div>
-            <!-- ENTER YOUR EMAIL -->
-                <div class="mt-10 mb-10 mx-auto flex justify-center items-center">
-                    <textarea class="scrollbar-none resize-none border-b-1 overflow-auto focus:border-amber-500 focus:outline-none focus:border-b-5 w-50 h-10 italic-placeholder" type="text" placeholder="Message us here..."></textarea>
-                    <i class="fa-solid fa-paper-plane hover:text-amber-600 cursor-pointer"></i>
-                </div>
-
-               <p class="ml-5 mr-5 text-center pt-"> Copyright © 2025 MmmMazing!. All rights reserved.</p>
             </div>
+
+            <div class="text-white mt-10 mb-10 ml-5 flex justify-center items-center">
+                <textarea class="scrollbar-none resize-none border-b-1 overflow-auto focus:border-amber-500 focus:outline-none focus:border-b-5 w-50 md:w-100 h-10 italic-placeholder" type="text" placeholder="Message us here..."></textarea>
+                <i class="fa-solid fa-paper-plane hover:text-amber-600 cursor-pointer"></i>
+            </div>
+            <p class="text-white ml-5 mr-5 text-center pb-5"> Copyright © 2025 MmmMazing!. All rights reserved.</p>
+
     </footer>
 </body>
 </html>
