@@ -1,0 +1,1 @@
+Mmmmazing food recipe blog is a simple static website that posts pure filipino foods with its recipes. This website is best for person learning to cook or trying other recipes. BASTA MAO NATO KAPOY NA LABAD SA UTOK PAJUD
