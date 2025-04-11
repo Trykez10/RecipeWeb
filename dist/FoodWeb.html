@@ -20,32 +20,31 @@
 
 <body class="text-black scroll-smooth">
     <!-- Navbar -->
+
     <nav class="relative shadow-2xl h-25">
-
         <img class="absolute w-25 h-auto ml-5 mt-3 rounded shadow-lg md:ml-15" src="./ImageFolder/WEBSITE LOGO.png" alt="WEBSITE LOGO"> 
-
-        <ul class="flex justify-end items-center gap-1 list-none md:justify-center ml-20">
+        <ul class="flex justify-end items-center gap-1 list-none lg:justify-center ml-20">
 
             <!-- NavBar for mobile  -->
-            <li id="openSideNav" onclick="openSideNav()" class="relative mt-4 p-3 text-4xl cursor-pointer mr-3 md:hidden">
+            <li id="openSideNav" onclick="openSideNav()" class="relative mt-4 p-3 text-4xl cursor-pointer mr-3 lg:hidden">
                 <i class="fa-solid fa-burger"></i>
             </li>
 
-            <div id="closeSideNav" class="opacity-0 transform transition-all translate-x-5 duration-300 ease-linear hidden absolute right-2 top-5 z-5 bg-white w-40 shadow-lg">
+            <div id="closeSideNav" class="opacity-0 transform transition-all translate-x-5 duration-300 ease-linear hidden absolute right-2 top-5 z-15 bg-white w-40 shadow-lg">
                 <li onclick="openSideNav()" class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl text-center"><i class="fa-solid fa-xmark"></i></li>
-                <a class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#">Home</a></li>
+                <a class="block lg:hidden p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#">Home</a></li>
                 <a class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#">About us</a></li>
                 <a class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#">Contacts</a></li>
                 <a class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#">Recipes</a></li>
             </div>
 
             <!-- DESKTOP VIEW -->
-            <a class="hidden active:bg-gray-600 active:text-white md:flex items-center h-25 p-3 text-2xl hover:bg-gray-200" href="#">Home</a></li>
-            <a class="hidden active:bg-gray-600 active:text-white md:flex items-center h-25 p-3 text-2xl hover:bg-gray-200" href="#">About us</a></li>
-            <a class="hidden active:bg-gray-600 active:text-white md:flex items-center h-25 p-3 text-2xl hover:bg-gray-200" href="#">Contacts</a></li>
-            <a class="hidden active:bg-gray-600 active:text-white md:flex items-center h-25 p-3 text-2xl hover:bg-gray-200" href="#">Recipes</a></li>
+            <a class="hidden active:bg-gray-600 active:text-white lg:flex items-center h-25 p-3 text-2xl hover:bg-gray-200" href="#">Home</a></li>
+            <a class="hidden active:bg-gray-600 active:text-white lg:flex items-center h-25 p-3 text-2xl hover:bg-gray-200" href="#">About us</a></li>
+            <a class="hidden active:bg-gray-600 active:text-white lg:flex items-center h-25 p-3 text-2xl hover:bg-gray-200" href="#">Contacts</a></li>
+            <a class="hidden active:bg-gray-600 active:text-white lg:flex items-center h-25 p-3 text-2xl hover:bg-gray-200" href="#">Recipes</a></li>
 
-            <div class="hidden md:block relative ml-25 mr-5">
+            <div class="hidden lg:flex relative ml-25 mr-5">
                 <input type="text" placeholder="Search..." class="p-2 border rounded">
             </div>
         </ul>
@@ -53,21 +52,22 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="mt-2 mr-5 ml-5 rounded-2xl h-80 md:h-120 relative overflow-hidden md:bg-amber-300 md:shadow-2xl">
-        <div class="relative w-full max-w-5xl md:translate-x-160 h-80 md:h-120">
-            <img id="imgSlideshow" class="w-full h-full object-cover transition-opacity opacity-70 duration-500 md:rounded-3xl md:opacity-80"
-                src="./ImageFolder/FOOD1.avif" alt="Slideshow Image">
+    <section class="mt-4 mx-5 rounded-2xl h-80 md:h-120 relative overflow-hidden bg-amber-300 shadow-2xl">
+        <div class="relative w-full h-full">
+            <img id="imgSlideshow" class="w-full h-full object-cover transition-opacity opacity-70 duration-500 rounded-2xl"
+                 src="./ImageFolder/FOOD1.avif" alt="Slideshow Image">
         </div>
 
-        <div class="z-10">
-            <h1 class="absolute transform translate-x-5 bottom-30 text-4xl font-extrabold w-40 leading-relaxed
-                    md:text-7xl md:w-120 md:translate-x-25 md:top-5 md:leading-snug"> <span class="text-red-500 animate-pulse">Spice</span> Up Your Kitchen!</h1>
-
-            <h1 id="CTAbutton1" class="px-3 py-1 absolute transform translate-x-5 bottom-15 text-lg font-normal bg-transparent hover:bg-amber-500
-                    active:bg-amber-300 active:text-white active:duration-50 rounded-xl cursor-pointer animate-bounce
-                    md:translate-x-25 md:bottom-7 md:text-2xl md:p-2 underline">Try These Tasty Recipes →</h1>
+        <div class="w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center z-10">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                <span class="text-red-500 animate-pulse">Spice</span> Up Your Kitchen!
+            </h1>
+            
+            <h1 id="CTAbutton1" class="w-fit mx-auto mt-5 px-4 py-2 bg-amber-500 hover:bg-amber-600 active:bg-amber-500 active:text-black active:duration-50 text-lg lg:text-2xl
+                    rounded-xl cursor-pointer animate-bounce underline">Try These Tasty Recipes →</h1>
         </div>
     </section> 
+
 
         <h1 class="w-fit text-3xl md:text-4xl font-bold mx-auto mt-15">
             What to <span class="text-amber-500">cook</span>?
