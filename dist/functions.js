@@ -1,16 +1,18 @@
 // SLIDE ANIMATION ON BURGER BUTTON
 function openSideNav(){
   const sideNav = document.getElementById('closeSideNav');
-
-  if(sideNav.classList.contains('hidden')){
-    sideNav.classList.remove('hidden');
+  const overlay = document.getElementById('overlay1');
   
+  if(sideNav.classList.contains('hidden')){
+
+    sideNav.classList.remove('hidden');
+
     requestAnimationFrame(() => {
       sideNav.classList.remove('opacity-0', 'translate-x-5');
       sideNav.classList.add('opacity-100', 'translate-x-0');
     });
     
-  }  else{
+  }else{
     sideNav.classList.remove('opacity-100', 'translate-x-0');
     sideNav.classList.add('opacity-0', 'translate-x-5');
 

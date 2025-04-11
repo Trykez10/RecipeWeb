@@ -4,24 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=chef_hat" />
-  <script src="https://kit.fontawesome.com/a59df86d25.js" crossorigin="anonymous"></script>
-  <title>Kitchen Recipes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="icon" href="./ImageFolder/favicon.ico" type="image/x-icon">
-  <script src="./functions.js" defer></script>
   <link href="./style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a59df86d25.js" crossorigin="anonymous"></script>
+  <script src="./functions.js" defer></script>
+  <title>Kitchen Recipes</title>
 
 <style>
+    body{
+        font-family: Poppins;
+    }
+
     .italic-placeholder::placeholder{
         font-style: italic;
         text-align: center;
+    }
+
+    .search-bar-Border{
+        border: none;
+        outline: none;
+    }
+
+    html{
+        scroll-behavior: smooth;
     }
 </style>
 </head>
 
 <body class="text-black scroll-smooth">
     <!-- Navbar -->
-
-    <nav class="relative shadow-2xl h-25">
+    <nav class="bg-white sticky top-0 shadow-xl shadow-gray-400/15 h-25 z-20">
         <img class="absolute w-25 h-auto ml-5 mt-3 rounded shadow-lg md:ml-15" src="./ImageFolder/WEBSITE LOGO.png" alt="WEBSITE LOGO"> 
         <ul class="flex justify-end items-center gap-1 list-none lg:justify-center ml-20">
 
@@ -32,85 +47,84 @@
 
             <div id="closeSideNav" class="opacity-0 transform transition-all translate-x-5 duration-300 ease-linear hidden absolute right-2 top-5 z-15 bg-white w-40 shadow-lg">
                 <li onclick="openSideNav()" class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl text-center"><i class="fa-solid fa-xmark"></i></li>
-                <a class="block lg:hidden p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#">Home</a></li>
-                <a class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#">About us</a></li>
-                <a class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#">Contacts</a></li>
-                <a class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#">Recipes</a></li>
+                <a class="block lg:hidden p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#Home">Home</a></li>
+                <a class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#MealType">Meal Type</a></li>
+                <a class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#FeaturedDishes">Featured</a></li>
+                <a class="block p-2 active:bg-gray-600 active:text-white hover:bg-gray-200 text-xl" href="#Testimonials">Testimonials</a></li>
             </div>
 
             <!-- DESKTOP VIEW -->
-            <a class="hidden active:bg-gray-600 active:text-white lg:flex items-center h-25 p-3 text-2xl hover:bg-gray-200" href="#">Home</a></li>
-            <a class="hidden active:bg-gray-600 active:text-white lg:flex items-center h-25 p-3 text-2xl hover:bg-gray-200" href="#">About us</a></li>
-            <a class="hidden active:bg-gray-600 active:text-white lg:flex items-center h-25 p-3 text-2xl hover:bg-gray-200" href="#">Contacts</a></li>
-            <a class="hidden active:bg-gray-600 active:text-white lg:flex items-center h-25 p-3 text-2xl hover:bg-gray-200" href="#">Recipes</a></li>
+            <a class="hidden transition duration-300 ease-linear active:bg-gray-600 active:text-white lg:flex items-center h-15 mt-5 px-4 rounded text-xl hover:bg-gray-200 hover:shadow-2xl" href="#Home">Home</a></li>
+            <a class="hidden transition duration-300 ease-linear active:bg-gray-600 active:text-white lg:flex items-center h-15 mt-5 px-4 rounded text-xl hover:bg-gray-200 hover:shadow-2xl" href="#MealType">Meal Type</a></li>
+            <a class="hidden transition duration-300 ease-linear active:bg-gray-600 active:text-white lg:flex items-center h-15 mt-5 px-4 rounded text-xl hover:bg-gray-200 hover:shadow-2xl" href="#FeaturedDishes">Featured</a></li>
+            <a class="hidden transition duration-300 ease-linear active:bg-gray-600 active:text-white lg:flex items-center h-15 mt-5 px-4 rounded text-xl hover:bg-gray-200 hover:shadow-2xl" href="#Testimonials">Testimonials</a></li>
 
-            <div class="hidden lg:flex relative ml-25 mr-5">
-                <input type="text" placeholder="Search..." class="p-2 border rounded">
+            <div class="hidden lg:flex relative ml-25 mr-5 p-2 border-b-2
+                      focus-within:border-amber-500 transition duration-200 ease-linear">
+                <i class="fa-solid fa-magnifying-glass mt-1 mr-2"></i>
+                <input class="outline-none" type="text" placeholder="Search...">
             </div>
         </ul>
        
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="mt-4 mx-5 rounded-2xl h-80 md:h-120 relative overflow-hidden bg-amber-300 shadow-2xl">
-        <div class="relative w-full h-full">
+    <section class="mt-4 mx-5 rounded-2xl h-80 md:h-120 relative overflow-hidden bg-black shadow-2xl">
+        <div id="Home" class="relative w-full h-full">
             <img id="imgSlideshow" class="w-full h-full object-cover transition-opacity opacity-70 duration-500 rounded-2xl"
                  src="./ImageFolder/FOOD1.avif" alt="Slideshow Image">
         </div>
 
         <div class="w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center z-10">
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-                <span class="text-red-500 animate-pulse">Spice</span> Up Your Kitchen!
+                <span class="text-red-400 animate-pulse">Spice</span> Up Your Kitchen!
             </h1>
-            
-            <h1 id="CTAbutton1" class="w-fit mx-auto mt-5 px-4 py-2 bg-amber-500 hover:bg-amber-600 active:bg-amber-500 active:text-black active:duration-50 text-lg lg:text-2xl
-                    rounded-xl cursor-pointer animate-bounce underline">Try These Tasty Recipes →</h1>
+            <h1 id="CTAbutton1" class="w-fit mx-auto mt-10 px-4 py-2 bg-amber-500 hover:bg-amber-600 active:bg-amber-500 active:text-black active:duration-50 text-lg lg:text-2xl
+                    rounded-xl cursor-pointer animate-bounce">Try These Tasty Recipes →</h1>
         </div>
     </section> 
-
-
-        <h1 class="w-fit text-3xl md:text-4xl font-bold mx-auto mt-15">
+        <h1 id="MealType" class="w-fit text-3xl md:text-4xl font-bold mx-auto mt-15 scroll-mt-40">
             What to <span class="text-amber-500">cook</span>?
         </h1>
     
         <!-- MEAL TYPES -->
         <div class="relative h-fit w-full text-center mt-5">
             <div class="flex flex-wrap justify-center gap-2 md:gap-10">
-                <div id="seeRecipeUpdate2" class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-600 cursor-pointer active:bg-amber-300 active:text-white active:duration-50 w-30 text-center md:text-2xl md:w-80">
+                <div id="seeRecipeUpdate2" class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-400 hover:shadow-amber-200 hover:shadow-xl cursor-pointer active:text-white active:duration-50 w-30 text-center md:text-2xl md:w-80">
                     All types
                 </div>
-                <div id="seeRecipeUpdate3" class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-600 cursor-pointer active:bg-amber-300 active:text-white active:duration-50 text-center md:text-2xl md:w-80">
+                <div id="seeRecipeUpdate3" class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-400 hover:shadow-amber-200 hover:shadow-xl cursor-pointer active:text-white active:duration-50 text-center md:text-2xl md:w-80">
                     Vegetarian Delights
                 </div>
-                <div id="seeRecipeUpdate4" class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-600 cursor-pointer active:bg-amber-300 active:text-white  active:duration-50 text-center md:text-2xl md:w-80">
+                <div id="seeRecipeUpdate4" class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-400 hover:shadow-amber-200 hover:shadow-xl cursor-pointer active:text-white  active:duration-50 text-center md:text-2xl md:w-80">
                     International Flavors
                 </div>
             </div>
     
             <div class="flex flex-wrap justify-center gap-2 md:gap-10 mt-5">
-                <div id="seeRecipeUpdate5" class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-600 cursor-pointer active:bg-amber-300 active:text-white  active:duration-50 w-30 text-center md:text-2xl md:w-60">
+                <div id="seeRecipeUpdate5" class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-400 hover:shadow-amber-200 hover:shadow-xl cursor-pointer active:text-white  active:duration-50 w-30 text-center md:text-2xl md:w-60">
                     Appetizers
                 </div>
-                <div id="seeRecipeUpdate6" class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-600 cursor-pointer active:bg-amber-300 active:text-white  active:duration-50 w-30 text-center md:text-2xl md:w-60">
+                <div id="seeRecipeUpdate6" class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-400 hover:shadow-amber-200 hover:shadow-xl cursor-pointer active:text-white  active:duration-50 w-30 text-center md:text-2xl md:w-60">
                     Main Courses
                 </div>
-                <div id="seeRecipeUpdate7" class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-600 cursor-pointer active:bg-amber-300 active:text-white  active:duration-50 w-40 text-center md:text-2xl md:w-60">
+                <div id="seeRecipeUpdate7" class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-400 hover:shadow-amber-200 hover:shadow-xl cursor-pointe active:text-white  active:duration-50 w-40 text-center md:text-2xl md:w-60">
                     Desserts & Sweets
                 </div>
             </div>
     
             <div  class="flex flex-wrap justify-center gap-2 md:gap-5 mt-5">
-                <div id="seeRecipeUpdate8" class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-600 cursor-pointer active:bg-amber-300 active:text-white  active:duration-50 w-40 text-center md:text-2xl md:w-80">
+                <div id="seeRecipeUpdate8" class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-400 hover:shadow-amber-200 hover:shadow-xl cursor-pointer active:text-white  active:duration-50 w-40 text-center md:text-2xl md:w-80">
                     Vegetarian Delights
                 </div>
-                <div id="seeRecipeUpdate9" class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-600 cursor-pointer active:bg-amber-300 active:text-white  active:duration-50 w-40 text-center md:text-2xl md:w-80">
+                <div id="seeRecipeUpdate9" class="text-sm rounded-xl p-1 transition duration-300 ease-linear bg-gray-200 hover:bg-amber-400 hover:shadow-amber-200 hover:shadow-xl cursor-pointer active:text-white  active:duration-50 w-40 text-center md:text-2xl md:w-80">
                     International Flavors
                 </div>
             </div>
         </div>
 
     <!-- Featured Dishes -->
-    <h1 class="w-fit text-3xl md:text-4xl font-bold mx-auto mt-15">
+    <h1 id="FeaturedDishes" class="w-fit text-3xl md:text-4xl font-bold mx-auto mt-15 scroll-mt-30">
         Featured <span class="text-amber-500">Pinoy</span> Dishes</h1>
 
     <!-- FOR DARKISH BACKGROUND -->
@@ -136,8 +150,8 @@
                 <div class="relative opacity-0 scale-95 transition-all duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
                     <!-- RECIPE CARD :> -->
                     <div class="sticky top-0 bg-gray-700 border-b-2 border-gray-500 mb-5 w-full h-20 flex justify-center items-center">
-                        <h1 class="italic font-bold text-2xl text-amber-500 absolute left-1/2 transform -translate-x-1/2 translate-y-2">Chicken Adobo</h1>
-                        <button class="absolute right-5 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white mr-5" id="closeModalButton1">X</button>
+                        <h1 class="italic font-bold text-2xl text-amber-500 absolute left-1/2 transform -translate-x-1/2 translate-y-5">Chicken Adobo</h1>
+                        <button class="absolute right-1 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton1">X</button>
                     </div>
                             <h1 class=" pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
                             <p>1 kg chicken (cut into serving pieces)</p>
@@ -194,7 +208,7 @@
                 <div class="opacity-0 scale-95 transition-all duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
                     <div class="sticky top-0 bg-gray-700 border-b-2 border-gray-500 mb-5 w-full h-20 flex justify-center items-center">
                         <h1 class="italic font-bold text-2xl text-amber-500 absolute left-1/2 transform -translate-x-1/2 translate-y-2">Sinigang na Baboy</h1>
-                        <button class="absolute right-5 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white mr-5" id="closeModalButton2">X</button>
+                        <button class="absolute right-1 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton2">X</button>
                     </div>
 
                     <h1 class="pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
@@ -247,8 +261,8 @@
                     <!-- MODAL CONTENT TANGINA AYOKO NA -->
                 <div class="opacity-0 scale-95 transition-all duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
                     <div class="sticky top-0 bg-gray-700 border-b-2 border-gray-500 mb-5 w-full h-20 flex justify-center items-center">
-                        <h1 class="italic font-bold text-2xl text-amber-500 absolute left-1/2 transform -translate-x-1/2 translate-y-2">Laing</h1>
-                        <button class="absolute right-5 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white mr-5" id="closeModalButton3">X</button>
+                        <h1 class="italic font-bold text-2xl text-amber-500 absolute left-1/2 transform -translate-x-1/2 translate-y-5">Laing</h1>
+                        <button class="absolute right-1 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton3">X</button>
                     </div>
 
                     <h1 class="pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
@@ -299,8 +313,8 @@
                     <!-- MODAL CONTENT TANGINA AYOKO NA -->
                 <div class="opacity-0 scale-95 transition-all duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
                     <div class="sticky top-0 bg-gray-700 border-b-2 border-gray-500 mb-5 w-full h-20 flex justify-center items-center">
-                        <h1 class="italic font-bold text-2xl text-amber-500 absolute left-1/2 transform -translate-x-1/2 translate-y-2">Kare-Kare</h1>
-                        <button class="absolute right-5 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white mr-5" id="closeModalButton4">X</button>
+                        <h1 class="italic font-bold text-2xl text-amber-500 absolute left-1/2 transform -translate-x-1/2 translate-y-5">Kare-Kare</h1>
+                        <button class="absolute right-1 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton4">X</button>
                     </div>
                     <h1 class="pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
                     <p>1 kg oxtail or beef tripe (or both)</p>
@@ -354,8 +368,8 @@
                     <!-- MODAL CONTENT TANGINA AYOKO NA -->
                 <div class="opacity-0 scale-95 transition-all duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
                     <div class="sticky top-0 bg-gray-700 border-b-2 border-gray-500 mb-5 w-full h-20 flex justify-center items-center">
-                        <h1 class="italic font-bold text-2xl text-amber-500 absolute left-1/2 transform -translate-x-1/2 translate-y-2">Tocilog</h1>
-                        <button class="absolute right-5 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white mr-5" id="closeModalButton5">X</button>
+                        <h1 class="italic font-bold text-2xl text-amber-500 absolute left-1/2 transform -translate-x-1/2 translate-y-5">Tocilog</h1>
+                        <button class="absolute right-1 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton5">X</button>
                     </div>
                     
                     <h1 class="pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
@@ -398,8 +412,8 @@
                     <!-- MODAL CONTENT TANGINA AYOKO NA -->
                 <div class="opacity-0 scale-95 transition-all duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
                     <div class="sticky top-0 w-full h-20 border-b-2 bg-gray-700 border-gray-500 mb-5 flex justify-center items-center">
-                        <h1 class="italic font-bold text-2xl text-amber-500 absolute left-1/2 transform -translate-x-1/2 translate-y-2">PORK SISIG</h1>
-                        <button class="absolute right-5 translate-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton6">X</button>
+                        <h1 class="italic font-bold text-2xl text-amber-500 absolute left-1/2 transform -translate-x-1/2 translate-y-5">PORK SISIG</h1>
+                        <button class="absolute right-1 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton6">X</button>
                     </div>
                     <h1 class="pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
                     <p>500g pork belly or pork face (maskara)</p>
@@ -447,7 +461,7 @@
                 <div class="opacity-0 scale-95 duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
                     <div class="sticky top-0 bg-gray-700 border-b-2 border-gray-500 mb-5 w-full h-20 flex justify-center items-center">
                         <h1 class="italic font-bold text-2xl text-amber-500 absolute left-1/2 transform -translate-x-1/2 translate-y-2">Lumpiang Shanghai</h1>
-                        <button class="absolute right-5 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white mr-5" id="closeModalButton7">X</button>
+                        <button class="absolute right-1 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton7">X</button>
                     </div>
                     <h1 class="pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
                     <p>500g ground pork</p>
@@ -493,8 +507,8 @@
                     <!-- MODAL CONTENT TANGINA AYOKO NA -->
                 <div class="opacity-0 scale-90 transition-all duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 leading-snug w-120 h-150 rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
                     <div class="sticky top-0 bg-gray-700 border-b-2 border-gray-500 mb-5 w-full h-20 flex justify-center items-center">
-                        <h1 class="italic font-bold text-2xl text-amber-500 absolute left-1/2 transform -translate-x-1/2 translate-y-2">Bicol Express</h1>
-                        <button class="absolute right-5 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white mr-5" id="closeModalButton8">X</button>
+                        <h1 class="italic font-bold text-2xl text-amber-500 absolute left-1/2 transform -translate-x-1/2 translate-y-5">Bicol Express</h1>
+                        <button class="absolute right-1 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeModalButton8">X</button>
                     </div>
                     <h1 class="pb-5 text-2xl text-amber-500">INGREDIENTS</h1>
                     <p>500g pork belly (sliced into strips)</p>
@@ -529,18 +543,20 @@
             </div>
         </div> 
     </div>
+
         <!-- SEE MORE RECIPE NOTICE -->
-        <div id="seeRecipeUpdate1" class="w-85 p-2 text-center mx-auto transition duration-200 ease-linear bg-gray-300 hover:bg-amber-500 active:bg-amber-300 active:text-white active:duration-50
-                cursor-pointer text-xl md:text-3xl mb-5 text-black-500 rounded-2xl">See more recipes →
+        <div id="seeRecipeUpdate1" class="w-85 p-2 text-center mx-auto transition duration-200 ease-linear bg-gray-200 hover:bg-amber-400 hover:shadow-amber-200 hover:shadow-xl active:text-white active:duration-50
+                cursor-pointer text-xl md:text-3xl mb-5 text-black-500 rounded-xl">See more recipes →
         </div>
+
+
     <div id="recipeUpdateContent1" class="hidden fixed inset-0 justify-center items-center z-20 overflow-x-hidden">
             <!-- MODAL CONTENT TANGINA AYOKO NA -->
         <div class="opacity-0 scale-90 transition-all duration-300 ease-out scrollbar-none text-center text-lg text-white pr-5 pl-5 pb-5 leading-snug w-120 h-fit rounded-lg shadow-sm dark:bg-gray-700 z-20 overflow-y-auto">
             <div class="sticky top-0 bg-gray-700 border-b-2 border-gray-500 mb-5 w-full h-20 flex justify-center items-center">
                 <h1 class="italic font-bold text-2xl text-red-500 absolute left-1/2 transform -translate-x-1/2 translate-y-1/2">NOTICE</h1>
-                <button class="absolute right-5 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white mr-5" id="closeRecipeUpdate1">X</button>
+                <button class="absolute right-1 translate-y-1/2 cursor-pointer rounded w-8 h-8 bg-amber-700 hover:bg-gray-600 focus:outline-2 focus:outline-red-600 active:bg-red-700 text-white" id="closeRecipeUpdate1">X</button>
             </div>
-            
             <h1> THIS FEATURE IS NOT AVAILABLE FOR NOW. KINDLY STAY TUNED FOR MORE RECIPE UPDATES!</h1>
             
         </div>
@@ -548,7 +564,7 @@
 
     <!-- TESTIMONIALS SECTION -->
     <section class="ml-5 mr-5 rounded-xl h-fit mb-10 bg-gray-800 md:h-fit" >
-        <h1 class="text-2xl text-center font-bold text-amber-500 pt-5 pb-5 md:text-4xl lg:pt-5">TESTIMONIALS</h1>
+        <h1 id="Testimonials" class="text-2xl text-center font-bold text-amber-500 pt-5 pb-5 scroll-mt-30 md:text-4xl lg:pt-5">TESTIMONIALS</h1>
         <div class="ml-5 mr-5 lg:ml-20 lg:mr-20 lg:pt-3 lg:pb-5 md:text-xl md:flex md:flex-wrap">
             <p class="italic text-white mb-5 lg:text-center lg:w-full">This site is a goldmine! The recipes are easy to follow and always turn out amazing.
                     I love how they include detailed tips for beginners <span class="not-italic"> - Annabelle Rama</span></p>
